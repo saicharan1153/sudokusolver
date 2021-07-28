@@ -32,7 +32,6 @@ btnsl.addEventListener("click",function(){
         ttble.push(sqrclls[j].value);
     }
     tble.push(ttble);
-    console.log(tble);
     var chck=isvalid(tble);
     var pval=document.querySelector('#bvalidity');
     if(chck!=true)
@@ -74,10 +73,14 @@ function isvalid(tble)
             let v1=tble[i][j];
             if(v1!==" " && v1!="")
             {
-                if(v1>9 || v1<=0)
+                if(v1==1 || v1==2 || v1==3 || v1==4 || v1==5 || v1==6 || v1==7 || v1==8 || v1==9)
+                {
+                    
+                }
+                else
                 {
                     return false;
-                }
+                }   
                 for(let k=0;k<9;k++)
                 {
                     if(v1==tble[i][k] && k!==j)
@@ -185,5 +188,6 @@ rsto.addEventListener("click",function(){
      for (let i = 0; i < sqrclls.length; i++)
      {
         sqrclls[i].style.backgroundColor="#FFFFFF";
+         sqrclls[i].style.color="#000000";
      }
 })
